@@ -62,46 +62,15 @@ local Info = Window:CreateTab("COSMOHUB ACCOUNT", nil) -- Title, Image
 local Hub = Window:CreateTab("SCRIPT HUB", nil) -- Title, Image
 
 -- SCRIPT HUB SCRIPT
-
-if game.GameId == 6516141723 then
-   local Paragraph = Hub:CreateParagraph({Title = "Detection System", Content = "A script for doors hub has been detected by KING HUB DOORS. With Lobby + Game hub."})
-Rayfield:Notify({
-   Title = "Detection System",
-   Content = "A script for doors has been detected! Visit the hub by clicking E and go to the tab Script Hub!",
-   Duration = 6.5,
-   Image = 4483362458,
-   Actions = { -- Notification Buttons
-      Ignore = {
-         Name = "Okay!",
-         Callback = function()
-         print("The user tapped Okay!")
-      end
-   },
-},
-})
-local Button = Tab:CreateButton({
-   Name = "Open Doors Hub by King Hub",
+local Paragraph = Hub:CreateParagraph({Title = "King Hub - Doors", Content = "The doors hub by king hub. With a bunch of exploits in it."})
+local Paragraph = Hub:CreateParagraph({Title = "Status", Content = "Online & Operational"})
+local Button = Hub:CreateButton({
+   Name = "Start Kings Hub",
    Callback = function()
-   loadstring(game:HttpGet(('https://pastebin.com/raw/R8QMbhzv')))()
    -- The function that takes place when the button is pressed
-Rayfield:Notify({
-   Title = "King Hub",
-   Content = "Switching to King Hub...",
-   Duration = 6.5,
-   Image = 4483362458,
-   Actions = { -- Notification Buttons
-      Ignore = {
-         Name = "Okay!",
-         Callback = function()
-         print("The user tapped Okay!")
-      end
-   },
-},
-})
-
+   loadstring(game:HttpGet(('https://pastebin.com/raw/R8QMbhzv')))()
    end,
 })
-end
 
 -- INFORMATION SCRIPT
 local account = game.Players.LocalPlayer
