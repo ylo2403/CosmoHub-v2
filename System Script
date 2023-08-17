@@ -1,0 +1,76 @@
+-- RAYFIELD: COSMOHUB EDITION SOURCE
+
+local Rayfield = loadstring(game:HttpGet("https://raw.githubusercontent.com/ylo2403/CosmoHub/main/source"))()
+
+-- PREMIUM USERS
+
+local admins = {
+    "DontAskQuestions672",
+}
+
+
+local premium = {
+    "",
+}
+
+-- INTERFACE
+
+local Window = Rayfield:CreateWindow({
+   Name = "CosmoSystems - Roblox",
+   LoadingTitle = "Roblox Hub",
+   LoadingSubtitle = "by CosmoHub",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "ROBLOXHUBDATASTORAGE"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "CosmoSystems Authorization",
+      Subtitle = "By CosmoHub",
+      Note = "To obtain the key you need the CosmoHub Launcher!",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = "cosmohub.w1198663" -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+Rayfield:Notify({
+   Title = "CosmoSystems",
+   Content = "Welcome to RobloxHub! We are gathering some game data! Please wait...",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+-- TABS 
+
+local Info = Window:CreateTab("COSMOHUB ACCOUNT", nil) -- Title, Image
+local Hub = Window:CreateTab("SCRIPT HUB", nil) -- Title, Image
+
+-- SCRIPT HUB SCRIPT
+
+local Paragraph = Hub:CreateParagraph({Title = "Detection System", Content = "No online scripts are enabled for RoHub!"})
+
+-- INFORMATION SCRIPT
+local account = game.Players.LocalPlayer
+
+local Paragraph = Info:CreateParagraph({Title = "Welcome to Roblox Hub!", Content = "Roblox Hub was made by CosmoSystems and CosmoHub. CosmoSystems is a known game developer for scifi games made by some random developers."})
+local Paragraph = Info:CreateParagraph({Title = "Detection System: RobloxHub", Content = "The Detection System from RobloxHub is powered by CosmoHub Detection Systems. When you execute the script and CosmoHub is connected with the roblox api then it will get your game id and game data to search for scripts. We will add a input later to submit scripts with links. Example: https://raw.githubusercontent.com/creatorname/rawlinkname or pastebin.com stuff. Enjoy RobloxHub."})
+
+local Label = Info:CreateLabel("")
+local Paragraph = Info:CreateParagraph({Title = "Username", Content = account.Name})
+local Paragraph = Info:CreateParagraph({Title = "Subscription", Content = "Unable to get CosmoHub account data!"})
