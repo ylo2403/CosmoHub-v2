@@ -8,6 +8,7 @@ local admins = {
     "DontAskQuestions672",
 }
 
+
 local premium = {
     "",
 }
@@ -62,17 +63,45 @@ local Hub = Window:CreateTab("SCRIPT HUB", nil) -- Title, Image
 
 -- SCRIPT HUB SCRIPT
 
-local Input = Hub:CreateInput({
-   Name = "Search",
-   PlaceholderText = "",
-   RemoveTextAfterFocusLost = false,
-   Callback = function(Text)
-   -- The function that takes place when the input is changed
-   -- The variable (Text) is a string for the value in the text box
-   end,
+if game.GameId == 6516141723 then
+   local Paragraph = Hub:CreateParagraph({Title = "Detection System", Content = "A script for doors hub has been detected by KING HUB DOORS. With Lobby + Game hub."})
+Rayfield:Notify({
+   Title = "Detection System",
+   Content = "A script for doors has been detected! Visit the hub by clicking E and go to the tab Script Hub!",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+local Button = Tab:CreateButton({
+   Name = "Open Doors Hub by King Hub",
+   Callback = function()
+   loadstring(game:HttpGet(('https://pastebin.com/raw/R8QMbhzv')))()
+   -- The function that takes place when the button is pressed
+Rayfield:Notify({
+   Title = "King Hub",
+   Content = "Switching to King Hub...",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
 })
 
-local Paragraph = Hub:CreateParagraph({Title = "Detection System", Content = "No online scripts are enabled for RoHub!"})
+   end,
+})
+end
 
 -- INFORMATION SCRIPT
 local account = game.Players.LocalPlayer
