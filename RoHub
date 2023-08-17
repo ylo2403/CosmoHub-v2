@@ -8,7 +8,6 @@ local admins = {
     "DontAskQuestions672",
 }
 
-
 local premium = {
     "",
 }
@@ -62,6 +61,16 @@ local Info = Window:CreateTab("COSMOHUB ACCOUNT", nil) -- Title, Image
 local Hub = Window:CreateTab("SCRIPT HUB", nil) -- Title, Image
 
 -- SCRIPT HUB SCRIPT
+
+local Input = Hub:CreateInput({
+   Name = "Search",
+   PlaceholderText = "",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Text)
+   -- The function that takes place when the input is changed
+   -- The variable (Text) is a string for the value in the text box
+   end,
+})
 
 local Paragraph = Hub:CreateParagraph({Title = "Detection System", Content = "No online scripts are enabled for RoHub!"})
 
