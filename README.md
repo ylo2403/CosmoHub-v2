@@ -1,2 +1,2 @@
-# Roblox-Hub
-Welcome to Roblox-Hub! A Hub created by the CosmoSystems Community. This hub will detect every game you join when you click execute or auto-execute if the hub detects it has scripts for it then the hub will send u a notify that there are scripts for your game and then create a tab with the game name.
+# ArrayField - Sirius // CosmoSystems
+Welcome. **ArrayField - Sirius** <- That is the loader. Yes. This is a version made for roblox studio so you do not have to design some shitty admin gui or control panel or atleast design one. You can use everything as normal but you can use it in roblox studio.
